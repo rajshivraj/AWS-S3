@@ -1,0 +1,99 @@
+{
+  "type" : "record",
+  "name" : "SubscriberData",
+  "fields" : [ {
+    "name" : "header",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Header",
+      "fields" : [ {
+        "name" : "version",
+        "type" : [ "null", "string" ]
+      } ]
+    } ]
+  }, {
+    "name" : "subscribers",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "OutboundSubscriber",
+        "fields" : [ {
+          "name" : "id",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "firstName",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "middleInitial",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "lastName",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "addressLine1",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "addressLine2",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "city",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "stateCode",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "postalCode",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "email",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "accountType",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "phones",
+          "type" : [ "null", {
+            "type" : "array",
+            "items" : {
+              "type" : "record",
+              "name" : "Phone",
+              "fields" : [ {
+                "name" : "type",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "number",
+                "type" : [ "null", "string" ]
+              } ]
+            }
+          } ]
+        }, {
+          "name" : "vehicles",
+          "type" : [ "null", {
+            "type" : "array",
+            "items" : {
+              "type" : "record",
+              "name" : "Vehicle",
+              "fields" : [ {
+                "name" : "id",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "vin",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "year",
+                "type" : [ "null", "int" ]
+              }, {
+                "name" : "make",
+                "type" : [ "null", "string" ]
+              }, {
+                "name" : "model",
+                "type" : [ "null", "string" ]
+              } ]
+            }
+          } ]
+        } ]
+      }
+    } ]
+  } ]
+}

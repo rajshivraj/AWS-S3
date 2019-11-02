@@ -1,0 +1,678 @@
+{
+  "type": "record",
+  "name": "SmartDriverData",
+  "namespace": "com.acme.avro",
+  "fields": [
+    {
+      "name": "unitOfMeasure",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "UnitOfMeasure",
+          "fields": [
+            {
+              "name": "direction",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "estimatedHorizontalPositionError",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "elevation",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "latitude",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "longitude",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "odometer",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "speed",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "speedRateOfChange",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "engineRunTimeTotal",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "engineIdleRunTimeTotal",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "engineRunTimePowerTakeOffActTotal",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "fuelUsed",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "electricVehicleOdometer",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            {
+              "name": "lifetimeEnergyUsed",
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            }
+          ]
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "mobilityData",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "OutboundMobility",
+            "fields": [
+              {
+                "name": "id",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "tripId",
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "default": null
+              },
+              {
+                "name": "trip",
+                "type": [
+                  "null",
+                  {
+                    "type": "record",
+                    "name": "Trip",
+                    "fields": [
+                      {
+                        "name": "hardAccelerateOrBrake",
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "record",
+                              "name": "HardAccelerateOrBrake",
+                              "fields": [
+                                {
+                                  "name": "hardAccel",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "accelerating",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "currentSpeed",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "speedRateOfChange",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "odometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "electricVehicleOdometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "timestamp",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "age",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "direction",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "estimatedHorizontalPositionError",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "elevation",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "latitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "longitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                }
+                              ]
+                            },
+                            "java-class": "java.util.List"
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "ignitionOnOrOff",
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "record",
+                              "name": "IgnitionOnOrOff",
+                              "fields": [
+                                {
+                                  "name": "ignitionOn",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineRunTimeTotal",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineIdleRunTimeTotal",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineIdleRunTimeTotalSup",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineRunTimePowerTakeOffActTotalSup",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineRunTimePowerTakeOffActTotal",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "engineRunTimeTotalSup",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "fuelUsed",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "lifetimeEnergyUsed",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "driverSeatbelt",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "powerMode",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "odometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "electricVehicleOdometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "timestamp",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "age",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "direction",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "estimatedHorizontalPositionError",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "elevation",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "latitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "longitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                }
+                              ]
+                            },
+                            "java-class": "java.util.List"
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "seatbelt",
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "record",
+                              "name": "Seatbelt",
+                              "fields": [
+                                {
+                                  "name": "driverSeatbelt",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "timestamp",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "age",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "direction",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "estimatedHorizontalPositionError",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "elevation",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "latitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "longitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                }
+                              ]
+                            },
+                            "java-class": "java.util.List"
+                          }
+                        ],
+                        "default": null
+                      },
+                      {
+                        "name": "speedThreshold",
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "type": "record",
+                              "name": "SpeedThreshold",
+                              "fields": [
+                                {
+                                  "name": "overThreshold",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "accelerating",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "currentSpeed",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "speedRateOfChange",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "odometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "electricVehicleOdometer",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "timestamp",
+                                  "type": [
+                                    "null",
+                                    "string"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "age",
+                                  "type": [
+                                    "null",
+                                    "boolean"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "direction",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "estimatedHorizontalPositionError",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "elevation",
+                                  "type": [
+                                    "null",
+                                    "int"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "latitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                },
+                                {
+                                  "name": "longitude",
+                                  "type": [
+                                    "null",
+                                    "double"
+                                  ],
+                                  "default": null
+                                }
+                              ]
+                            },
+                            "java-class": "java.util.List"
+                          }
+                        ],
+                        "default": null
+                      }
+                    ]
+                  }
+                ],
+                "default": null
+              }
+            ]
+          },
+          "java-class": "java.util.List"
+        }
+      ],
+      "default": null
+    }
+  ]
+}

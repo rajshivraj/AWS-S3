@@ -1,0 +1,289 @@
+{
+  "type" : "record",
+  "name" : "SmartDriverData",
+  "fields" : [ {
+    "name" : "header",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "MobilityHeader",
+      "fields" : [ {
+        "name" : "unitOfMeasure",
+        "type" : [ "null", {
+          "type" : "record",
+          "name" : "UnitOfMeasure",
+          "fields" : [ {
+            "name" : "direction",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "estimatedHorizontalPositionError",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "elevation",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "latitude",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "longitude",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "odometer",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "speed",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "speedRateOfChange",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "engineRunTimeTotal",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "engineIdleRunTimeTotal",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "engineRunTimePowerTakeOffActTotal",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "fuelUsed",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "electricVehicleOdometer",
+            "type" : [ "null", "string" ]
+          }, {
+            "name" : "lifetimeEnergyUsed",
+            "type" : [ "null", "string" ]
+          } ]
+        } ]
+      }, {
+        "name" : "version",
+        "type" : [ "null", "string" ]
+      } ]
+    } ]
+  }, {
+    "name" : "mobilityData",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "OutboundMobility",
+        "fields" : [ {
+          "name" : "id",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "tripId",
+          "type" : [ "null", "string" ]
+        }, {
+          "name" : "trip",
+          "type" : [ "null", {
+            "type" : "record",
+            "name" : "Trip",
+            "fields" : [ {
+              "name" : "hardAccelerateOrBrake",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "HardAccelerateOrBrake",
+                  "fields" : [ {
+                    "name" : "hardAccel",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "accelerating",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "currentSpeed",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "speedRateOfChange",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "odometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "electricVehicleOdometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "timestamp",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "age",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "direction",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "estimatedHorizontalPositionError",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "elevation",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "latitude",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "longitude",
+                    "type" : [ "null", "double" ]
+                  } ]
+                }
+              } ]
+            }, {
+              "name" : "ignitionOnOrOff",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "IgnitionOnOrOff",
+                  "fields" : [ {
+                    "name" : "ignitionOn",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "engineRunTimeTotal",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "engineIdleRunTimeTotal",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "engineIdleRunTimeTotalSup",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "engineRunTimePowerTakeOffActTotalSup",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "engineRunTimePowerTakeOffActTotal",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "engineRunTimeTotalSup",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "fuelUsed",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "lifetimeEnergyUsed",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "driverSeatbelt",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "powerMode",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "odometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "electricVehicleOdometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "timestamp",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "age",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "direction",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "estimatedHorizontalPositionError",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "elevation",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "latitude",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "longitude",
+                    "type" : [ "null", "double" ]
+                  } ]
+                }
+              } ]
+            }, {
+              "name" : "seatbelt",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "Seatbelt",
+                  "fields" : [ {
+                    "name" : "driverSeatbelt",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "timestamp",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "age",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "direction",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "estimatedHorizontalPositionError",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "elevation",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "latitude",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "longitude",
+                    "type" : [ "null", "double" ]
+                  } ]
+                }
+              } ]
+            }, {
+              "name" : "speedThreshold",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : {
+                  "type" : "record",
+                  "name" : "SpeedThreshold",
+                  "fields" : [ {
+                    "name" : "overThreshold",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "accelerating",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "currentSpeed",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "speedRateOfChange",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "odometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "electricVehicleOdometer",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "timestamp",
+                    "type" : [ "null", "string" ]
+                  }, {
+                    "name" : "age",
+                    "type" : [ "null", "boolean" ]
+                  }, {
+                    "name" : "direction",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "estimatedHorizontalPositionError",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "elevation",
+                    "type" : [ "null", "int" ]
+                  }, {
+                    "name" : "latitude",
+                    "type" : [ "null", "double" ]
+                  }, {
+                    "name" : "longitude",
+                    "type" : [ "null", "double" ]
+                  } ]
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      }
+    } ]
+  } ]
+}
